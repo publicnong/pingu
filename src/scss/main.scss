@@ -1,0 +1,131 @@
+@import url('../../node_modules/node.normalize.scss/_normalize.scss');
+
+/** Background */
+$black1-fluid: rgba(0,0,0,0.45);
+$black2-fluid: rgba(0,0,0,0.7);
+
+// $color-primary: #1864ab;
+$color-primary: #0b7285;
+// $color-primary: #862e9c;
+// $color-primary: #a61e4d;
+// $color-primary: #ffd43b;
+
+body {
+
+  // opacity: 0.1;
+  background-color: $color-primary;
+  // background-color: rgba(160,160,160,0.5);
+
+}
+
+.background--first {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-image: radial-gradient($black1-fluid, $black2-fluid);
+  // color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.025);
+    left: 10vh;
+    top: 10vh;
+  }
+}
+
+.background--second {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.07;
+  background: repeating-linear-gradient(-90deg,
+      transparent,
+      transparent 2px,
+      black 2px,
+      black 10px);
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.15);
+    left: 15vh;
+    top: 15vh;
+  }
+}
+
+.background--third {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.5;
+  background: linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.self {
+  position: absolute;
+  top: 48%;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  color: rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  z-index: 10;
+  font-size: 36px;
+  font-family: 'Holtwood One SC', sans-serif;
+  font-weight: 100;
+  text-shadow: 0 1px 0px $color-primary;
+  // animation: come 10s ease-in;
+}
+
+@keyframes come {
+  0% {
+    opacity: 0;
+    top:50%;
+    // font-size: 0;
+  }
+  50% {
+    opacity: 1;
+    top:50%;
+    // font-size: 38px;
+  }
+  100% {
+    opacity: 1;
+    top: 30%;
+  }
+}
+
+.introduction {
+  font-family: 'Cormorant Upright', serif;
+  // font-weight: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 5;
+  font-size: 16px;
+}
+//
+// .motd__container {
+//   width: 450px;
+//   height: 100px;
+//   border-radius: 5px;
+//   background-color: rgba(0, 0, 0, 0.1);
+//   color: white;
+//   position: absolute;
+//   z-index: 10;
+//   margin: auto;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }
